@@ -23,13 +23,28 @@ function handleNoClick() {
     
     // Increase Yes button size significantly
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    const newSize = currentSize * 1.5;
+    const newSize = currentSize * 1.6; // Increased multiplier
     yesButton.style.fontSize = `${newSize}px`;
     
-    // Calculate new padding based on font size to maintain proportions
+    // Calculate new padding
     const paddingY = newSize * 0.5;
     const paddingX = newSize * 1.2;
     yesButton.style.padding = `${paddingY}px ${paddingX}px`;
+
+    // If the button gets very large, ensure it covers the screen
+    if (newSize > 100) {
+        yesButton.style.position = 'fixed';
+        yesButton.style.zIndex = '9999';
+        yesButton.style.top = '50%';
+        yesButton.style.left = '50%';
+        yesButton.style.transform = 'translate(-50%, -50%)';
+        yesButton.style.width = '100vw';
+        yesButton.style.height = '100vh';
+        yesButton.style.display = 'flex';
+        yesButton.style.alignItems = 'center';
+        yesButton.style.justifyContent = 'center';
+        yesButton.style.borderRadius = '0';
+    }
 
     // Add shake effect to No button
     noButton.classList.add('shake');
@@ -42,46 +57,6 @@ function handleYesClick() {
     window.location.href = "yes_page.html";
 }
 
-// Create floating hearts with more variety
-function createHearts() {
-    const bg = document.getElementById('bg-hearts');
-    const heartSymbols = [
-        '❤️', '💖', '💕', '💗', '💓', '🌸', '✨', '🌹', 
-        '🦋', '🍬', '🍭', '🎀', '💝', '💘', '💌', '🧸', '🍓'
-    ];
-    
-    const count = 20; // Increased count for more density
-    for (let i = 0; i < count; i++) {
-        setTimeout(() => {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            
-            // Randomly choose a symbol
-            heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
-            
-            // Random properties
-            const size = Math.random() * 25 + 10; // 10px to 35px
-            const left = Math.random() * 100; // 0 to 100vw
-            const duration = Math.random() * 10 + 5; // 5s to 15s
-            const delay = Math.random() * 5;
-            const blur = Math.random() * 1.5;
-            
-            heart.style.left = `${left}vw`;
-            heart.style.fontSize = `${size}px`;
-            heart.style.animation = `floatUp ${duration}s linear infinite`;
-            heart.style.animationDelay = `${delay}s`;
-            heart.style.filter = `blur(${blur}px)`;
-            heart.style.opacity = Math.random() * 0.6 + 0.3;
-            
-            bg.appendChild(heart);
-            
-            // Remove heart after animation to keep DOM clean
-            setTimeout(() => {
-                heart.remove();
-            }, (duration + delay) * 1000);
-        }, i * 300);
-    }
-}
 
 // Initial call and periodic generation
 createHearts();
