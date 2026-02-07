@@ -8,16 +8,28 @@
 </head>
 <body>
     <div class="bg-hearts" id="bg-hearts"></div>
+
+    <audio id="bg-music" loop>
+        <!-- CUSTOMIZE: Replace 'apnabnale.mp3' with your music file name or URL -->
+        <source src="apnabnale.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="container">
+        <!-- CUSTOMIZE: Celebration text here -->
         <h1 class="header_text">Pata hi tha hue hue hue 💕</h1>
         <div class="gif_container">
+            <!-- CUSTOMIZE: Replace this URL with any happy GIF you like -->
             <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczVlYmRpdnhkc3R2aWMzanYzanY4N3QwcmtmaWRzejJrMHY4ZDZidiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TjSPQgowhhJdHgvnwA/giphy.gif" alt="Happy GIF">
         </div>
     </div>
     <script>
-        // Enhanced heart and emoji generation for the yes page
+        const music = document.getElementById('bg-music');
+        window.addEventListener('load', () => music.play().catch(() => {}));
+        document.addEventListener('click', () => music.play(), { once: true });
+
         function createHearts() {
             const bg = document.getElementById('bg-hearts');
+            /* CUSTOMIZE: Add or remove any emojis you want floating in the background */
             const heartSymbols = [
                 '❤️', '💖', '💕', '💗', '💓', '🌸', '✨', '🌹', 
                 '🦋', '🎀', '💝', '💘', '💌', '🧸', '🍓', '🎉', '🥂'

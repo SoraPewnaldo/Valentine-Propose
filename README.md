@@ -6,17 +6,27 @@ A beautiful, interactive, and responsive web page designed for a special Valenti
 
 - **🌸 Aesthetic UI:** Modern glassmorphism design with a soft pastel gradient background.
 - **📱 Fully Responsive:** Optimized for both desktop and mobile devices.
-- **🎈 Floating Animations:** Dynamic background with floating hearts and sparkles.
+- **🎵 Romantic Music:** Built-in audio player with a floating toggle control and autoplay logic.
+- **🎈 Dynamic Animations:** Background filled with a variety of floating romantic emojis and hearts.
+- **🛠️ Easy Customization:** Labeled code sections for quick personal changes.
 - **🎮 Interactive Logic:**
-  - "No" button changes text and shakes on click.
-  - "Yes" button grows significantly with each "No" click.
-  - A hidden celebratory page once they finally say "Yes!"
-- **🎨 Premium Typography:** Uses 'Dancing Script' for a romantic, handwritten feel.
+  - "No" button features a long sequence of playful, persuasive messages.
+  - "Yes" button grows significantly with each "No" click until it fills the screen.
+  - Celebration page with festive animations once they say "Yes!"
 
 ## 🚀 Live Demo
 
 Check out the live page here:  
 **[https://sorapewnaldo.github.io/Valentine-Propose/](https://sorapewnaldo.github.io/Valentine-Propose/)**
+
+## 🎨 How to Customize
+
+I've added `CUSTOMIZE` markers throughout the code to help you make it your own. Simply open the files and search for the word **CUSTOMIZE** to find where to:
+- Change the **Music** (`index.html` & `yes_page.html`)
+- Edit the **Proposal Text** (`index.html`)
+- Update the **"No" Button Messages** (`script.js`)
+- Swap the **GIFs** (`index.html` & `yes_page.html`)
+- Change the **Colors** (`styles.css` & `yes_style.css`)
 
 ## 🛠️ Tech Stack
 
@@ -24,17 +34,5 @@ Check out the live page here:
 - **CSS3** - Styling & Animations (Glassmorphism, Flexbox)
 - **JavaScript** - Interaction Logic & Dynamic Heart Generation
 
-## 📂 Project Structure
-
-- `index.html` - The main proposal page.
-- `script.js` - Handles button logic and background animations.
-- `styles.css` - Custom styling for the main page.
-- `yes_page.html` - The celebration page.
-- `yes_style.css` - Custom styling for the success page.
-
-## 🤝 Contributing
-
-This project was created for personal use, but feel free to fork it, customize the messages in `script.js`, and make it your own!
-
 ---
-*Made with ❤️ by [Sora Penaldo](https://github.com/SoraPewnaldo)*
+*Made with ❤️ by [SoraPewnaldo](https://github.com/SoraPewnaldo)*

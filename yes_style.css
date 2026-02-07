@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
 
 :root {
+  /* CUSTOMIZE: Ensure these match your colors in styles.css */
   --primary-color: #ff4d6d;
   --bg-color: #fff0f3;
   --text-color: #590d22;
@@ -48,5 +49,3 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-
-/* Confetti-like background hearts can be added here too */
