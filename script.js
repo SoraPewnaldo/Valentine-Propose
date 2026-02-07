@@ -66,20 +66,6 @@ function handleNoClick() {
     const paddingX = newSize * 1.2;
     yesButton.style.padding = `${paddingY}px ${paddingX}px`;
 
-    if (newSize > 100) {
-        yesButton.style.position = 'fixed';
-        yesButton.style.zIndex = '9999';
-        yesButton.style.top = '50%';
-        yesButton.style.left = '50%';
-        yesButton.style.transform = 'translate(-50%, -50%)';
-        yesButton.style.width = '100vw';
-        yesButton.style.height = '100vh';
-        yesButton.style.display = 'flex';
-        yesButton.style.alignItems = 'center';
-        yesButton.style.justifyContent = 'center';
-        yesButton.style.borderRadius = '0';
-    }
-
     noButton.classList.add('shake');
     setTimeout(() => {
         noButton.classList.remove('shake');
